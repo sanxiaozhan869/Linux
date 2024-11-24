@@ -13,8 +13,18 @@ show_menu() {
     clear
     local greeting
     greeting=$(get_greeting)
+cat << EOF
+                                                                                  
+██╗  ██╗███████╗ ██████╗██╗      ██████╗ ██╗   ██╗██████╗ ███████╗██████╗ ██╗   ██╗
+╚██╗██╔╝╚══███╔╝██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗██╔════╝██╔══██╗██║   ██║
+ ╚███╔╝   ███╔╝ ██║     ██║     ██║   ██║██║   ██║██║  ██║███████╗██████╔╝██║   ██║
+ ██╔██╗  ███╔╝  ██║     ██║     ██║   ██║██║   ██║██║  ██║╚════██║██╔══██╗╚██╗ ██╔╝
+██╔╝ ██╗███████╗╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝███████║██║  ██║ ╚████╔╝ 
+╚═╝  ╚═╝╚══════╝ ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝  ╚═══╝  
+                                                                                   
+EOF
     echo "小战云Linux工具箱菜单"
-    echo "官网：https://www.78san.cn"
+    echo "官网：https://idc.79san.cn"
     echo "此脚本完全免费使用，纯净无后门"
     echo "服务器IP地址: $server_ip"
     echo "服务器运行时间: $uptime_cn"
@@ -1199,11 +1209,11 @@ do
                2) 
                    wget -qO- git.io/besttrace | bash;;  
                3) 
-                   yum install -y wget && wget -O install.sh http://download.bt.cn/install/install_6.0.sh && sh install.sh 43d150a0;; 
+                   if [ -f /usr/bin/curl ];then curl -sSO https://download.bt.cn/install/install_panel.sh;else wget -O install_panel.sh https://download.bt.cn/install/install_panel.sh;fi;bash install_panel.sh ed8484bec;; 
                4) 
-                   wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh && sudo bash install.sh 43d150a0;;    
+                   if [ -f /usr/bin/curl ];then curl -sSO https://download.bt.cn/install/install_panel.sh;else wget -O install_panel.sh https://download.bt.cn/install/install_panel.sh;fi;bash install_panel.sh ed8484bec;;    
                5) 
-                   wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh && bash install.sh 43d150a0;; 
+                   if [ -f /usr/bin/curl ];then curl -sSO https://download.bt.cn/install/install_panel.sh;else wget -O install_panel.sh https://download.bt.cn/install/install_panel.sh;fi;bash install_panel.sh ed8484bec;; 
                6) 
                    yum -y install wget;wget http://kangle.cccyun.cn/start;sh start;;    
                7) 
